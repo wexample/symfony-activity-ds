@@ -1,0 +1,19 @@
+en:
+  empty: Nothing recorded yet.
+  more: The whole history
+  by_someone_else: by someone else
+  column:
+    date: When
+    category: Category
+    type: What
+    context: Details
+
+fr:
+  empty: Rien d'enregistré pour le moment.
+  more: Tout l'historique
+  by_someone_else: par quelqu'un d'autre
+  column:
+    date: Quand
+    category: Catégorie
+    type: Quoi
+    context: Détails

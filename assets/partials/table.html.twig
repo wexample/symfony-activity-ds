@@ -1,0 +1,36 @@
+{#- One page of a history as a table, newest first, and its pages: what a
+    page about the whole history of a subject shows. Fed with one page of
+    Activity entities (`entries`), the current `page` and `pages_count` — as
+    ActivityRepository::paginate() returns them. The context is shown as it
+    was recorded, key by key. -#}
+{%- set domain = 'WexampleSymfonyActivityDsBundle.common.activity::' -%}
+{%- if entries is empty -%}
+    <p class="text-secondary">{{ (domain ~ 'empty') | trans }}</p>
+{%- else -%}
+    {%- set rows = [] -%}
+    {%- for entry in entries -%}
+        {%- set context_cell -%}
+            {%- for key, value in entry.context -%}
+                <span class="text-secondary">{{ key }}</span> {{ value }}{% if not loop.last %} · {% endif %}
+            {%- endfor -%}
+            {%- if entry.actorId -%}
+                {% if entry.context is not empty %} · {% endif %}<em>{{ (domain ~ 'by_someone_else') | trans }}</em>
+            {%- endif -%}
+        {%- endset -%}
+        {%- set rows = rows | merge([{
+            date: date_display(entry.occurredAt, 'date_time_short'),
+            category: marker(entry.type matches '/(failed|denied|refused|expired)/' ? 'danger' : 'neutral', entry.category, { compact: true }),
+            type: '<code>' ~ entry.type | e ~ '</code>',
+            context: context_cell,
+        }]) -%}
+    {%- endfor -%}
+
+    {{ data_table([
+        { key: 'date', label: (domain ~ 'column.date') | trans, cell: 'html', class: 'table--cell--nowrap' },
+        { key: 'category', label: (domain ~ 'column.category') | trans, cell: 'html', class: 'table--cell--nowrap' },
+        { key: 'type', label: (domain ~ 'column.type') | trans, cell: 'html' },
+        { key: 'context', label: (domain ~ 'column.context') | trans, cell: 'html', secondary: true },
+    ], rows) }}
+
+    {{ pagination(page, pages_count, { hide_single: true }) }}
+{%- endif -%}

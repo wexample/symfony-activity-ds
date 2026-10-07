@@ -1,0 +1,21 @@
+{#- The last entries of a history, newest first, as a timeline: the short
+    story a page about the subject shows, with the way to the whole of it
+    (`more_href`). Fed with the Activity entities themselves (`entries`).
+    A failure, a refusal, a denial is drawn in the danger tone. -#}
+{%- set domain = 'WexampleSymfonyActivityDsBundle.common.activity::' -%}
+{%- if entries is empty -%}
+    <p class="text-secondary">{{ (domain ~ 'empty') | trans }}</p>
+{%- else -%}
+    {%- set items = [] -%}
+    {%- for entry in entries -%}
+        {%- set items = items | merge([{
+            title: entry.type,
+            meta: entry.category ~ ' · ' ~ entry.occurredAt | date('Y-m-d H:i') ~ (entry.actorId ? ' · ' ~ (domain ~ 'by_someone_else') | trans : ''),
+            tone: entry.type matches '/(failed|denied|refused|expired)/' ? 'danger' : null,
+        }]) -%}
+    {%- endfor -%}
+    {{ component(render_pass, '@WexampleSymfonyDesignSystemBundle/components/timeline', {}, { items: items }) }}
+{%- endif -%}
+{%- if more_href | default(null) and entries is not empty -%}
+    <p>{{ text_link(more_href, (domain ~ 'more') | trans) }}</p>
+{%- endif -%}

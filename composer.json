@@ -7,5 +7,33 @@
     "psr-4": {
       "Wexample\\SymfonyActivityDs\\": "src/"
     }
+  },
+  "description": "Design-system screens for symfony-activity: the history of a subject, as a recent timeline and a paged table",
+  "authors": [
+    {
+      "name": "weeger",
+      "email": "romain.weeger@wexample.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.5",
+    "wexample/symfony-activity": ">=1.0.0",
+    "wexample/symfony-design-system": ">=31.0.0",
+    "wexample/symfony-helpers": ">=15.0.0",
+    "wexample/symfony-loader": ">=21.0.0"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../*",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "extra": {
+    "install": {
+      "bundle_env": "all"
+    }
   }
 }
