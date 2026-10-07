@@ -1,0 +1,16 @@
+{#- What a change did, a line per field: `old → new`, a value set from
+    nothing alone after its arrow, the old one struck. Plain lines, needing
+    no style of their own in a table cell or a timeline. Fed with an
+    ActivityEntry of the `change` category (`entry`); what was created or
+    removed is named by its label when it touched no field. -#}
+{%- set domain = 'WexampleSymfonyActivityDsBundle.common.activity::' -%}
+{%- if entry.changes is not empty -%}
+    {%- for change in entry.changes -%}
+        <span class="text-secondary">{{ change.field }}</span>
+        {% if change.old is not null %}<del>{{ change.old }}</del>{% endif %}
+        {% if change.new is not null %}→ {{ change.new }}{% elseif change.old is not null %}→ <em>{{ (domain ~ 'change.emptied') | trans }}</em>{% endif %}
+        {%- if not loop.last %}<br>{% endif -%}
+    {%- endfor -%}
+{%- elseif entry.context.label is defined -%}
+    {{ entry.context.label }}
+{%- endif -%}

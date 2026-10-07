@@ -1,0 +1,12 @@
+// The journal: a card holding the table of every entry, its filters and its
+// pages.
+@use '@wexample/symfony-design-system/css/shapes/block';
+@use '@wexample/symfony-design-system/css/shapes/stack';
+@use '@wexample/symfony-design-system/css/shapes/cluster';
+@use '@wexample/symfony-design-system/components/button/button';
+@use '@wexample/symfony-design-system/components/marker/marker';
+@use '@wexample/symfony-design-system/components/date-display/date-display';
+@use '@wexample/symfony-design-system/components/data-table/data-table';
+@use '@wexample/symfony-design-system/components/filter-bar/filter-bar';
+@use '@wexample/symfony-design-system/components/pagination/pagination';
+

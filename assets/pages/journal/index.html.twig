@@ -1,0 +1,35 @@
+{%- extends '@front/layouts/private/layout.html.twig' -%}
+
+{%- set page_show_title = true -%}
+
+{#- The journal of every subject: events and field changes together, newest
+    first. Category, type and period are the table's filters, kept in the
+    query; who did it is chosen from the table, by pressing a name, and shown
+    above it with the way back to everyone. -#}
+{%- block page_body -%}
+    {%- set route = app.request.attributes.get('_route') -%}
+    {%- set periods_options = [] -%}
+    {%- for period in periods -%}
+        {%- set periods_options = periods_options | merge([{ value: period, label: ('@page::period.' ~ period) | trans }]) -%}
+    {%- endfor -%}
+
+    <section class="block block--card">
+        <div class="block--body stack--vertical">
+            {%- if actor -%}
+                <div class="cluster">
+                    <span>{{ '@page::actor.label' | trans({ '%actor%': actor.label }) }}</span>
+                    {{ button_link('ph:bold/x', '@page::actor.clear' | trans, path(route, app.request.query.all | merge({ actor_type: null, actor_id: null, page: null })), { class: 'button--flat' }) }}
+                </div>
+            {%- endif -%}
+
+            {%- include '@WexampleSymfonyActivityDsBundle/partials/table.html.twig' with {
+                journal: true,
+                filters: [
+                    { key: 'category', label: '@page::filter.category' | trans, options: categories | map(name => { value: name, label: name }) },
+                    { key: 'type', label: '@page::filter.type' | trans, options: types | map(name => { value: name, label: name }) },
+                    { key: 'period', label: '@page::filter.period' | trans, options: periods_options },
+                ],
+            } -%}
+        </div>
+    </section>
+{%- endblock -%}

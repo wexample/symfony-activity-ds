@@ -1,0 +1,31 @@
+en:
+  page_title: Journal
+  page_icon: ph:bold/clock-counter-clockwise
+  filter:
+    category: Category
+    type: What
+    period: Period
+  period:
+    day: Last 24 hours
+    week: Last 7 days
+    month: Last month
+    year: Last year
+  actor:
+    label: "Done by %actor%"
+    clear: Everyone
+
+fr:
+  page_title: Journal
+  page_icon: ph:bold/clock-counter-clockwise
+  filter:
+    category: Catégorie
+    type: Quoi
+    period: Période
+  period:
+    day: Dernières 24 heures
+    week: 7 derniers jours
+    month: Dernier mois
+    year: Dernière année
+  actor:
+    label: "Fait par %actor%"
+    clear: Tout le monde

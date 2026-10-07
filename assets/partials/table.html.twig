@@ -1,36 +1,67 @@
 {#- One page of a history as a table, newest first, and its pages: what a
     page about the whole history of a subject shows. Fed with one page of
-    Activity entities (`entries`), the current `page` and `pages_count` — as
-    ActivityRepository::paginate() returns them. The context is shown as it
-    was recorded, key by key. -#}
+    entries (`entries`), the current `page` and `pages_count` — as
+    ActivityRepository::paginate() and ActivityJournalService::paginate()
+    return them. An event shows its context key by key, a change the fields
+    it touched.
+
+    `journal: true` draws the journal of every subject: who did it and what
+    it was about get a column each, and who did it links to what else they
+    did (`actor_route`, the page's own route by default). `filters` are handed
+    to the table's bar, as data_table() takes them. -#}
 {%- set domain = 'WexampleSymfonyActivityDsBundle.common.activity::' -%}
-{%- if entries is empty -%}
+{%- set journal = journal | default(false) -%}
+{%- if entries is empty and not filters | default([]) -%}
     <p class="text-secondary">{{ (domain ~ 'empty') | trans }}</p>
 {%- else -%}
+    {%- set actor_route = actor_route | default(app.request.attributes.get('_route')) -%}
     {%- set rows = [] -%}
     {%- for entry in entries -%}
-        {%- set context_cell -%}
-            {%- for key, value in entry.context -%}
-                <span class="text-secondary">{{ key }}</span> {{ value }}{% if not loop.last %} · {% endif %}
-            {%- endfor -%}
-            {%- if entry.actorId -%}
-                {% if entry.context is not empty %} · {% endif %}<em>{{ (domain ~ 'by_someone_else') | trans }}</em>
+        {%- set details_cell -%}
+            {%- if entry.change -%}
+                {{ include('@WexampleSymfonyActivityDsBundle/partials/changes.html.twig', { entry: entry }) }}
+            {%- else -%}
+                {%- for key, value in entry.context -%}
+                    <span class="text-secondary">{{ key }}</span> {{ value }}{% if not loop.last %} · {% endif %}
+                {%- endfor -%}
+                {%- if not journal and entry.actorId -%}
+                    {% if entry.context is not empty %} · {% endif %}<em>{{ (domain ~ 'by_someone_else') | trans }}</em>
+                {%- endif -%}
             {%- endif -%}
         {%- endset -%}
-        {%- set rows = rows | merge([{
+        {%- set row = {
             date: date_display(entry.occurredAt, 'date_time_short'),
             category: marker(entry.type matches '/(failed|denied|refused|expired)/' ? 'danger' : 'neutral', entry.category, { compact: true }),
             type: '<code>' ~ entry.type | e ~ '</code>',
-            context: context_cell,
-        }]) -%}
+            details: details_cell,
+        } -%}
+        {%- if journal -%}
+            {#- Nobody else named: the subject did it itself. A change knows
+                its author by id only, so it links to nothing. -#}
+            {%- set actor = entry.actorId
+                ? { type: entry.actorType, id: entry.actorId, label: entry.actorLabel ?: entry.actorId }
+                : { type: entry.subjectType, id: entry.subjectId, label: entry.subjectLabel } -%}
+            {%- set row = row | merge({
+                actor: actor.type and actor.id
+                    ? text_link(path(actor_route, app.request.query.all | merge({ actor_type: actor.type, actor_id: actor.id, page: null })), actor.label)
+                    : (actor.label | e),
+                subject: entry.subjectLabel | e,
+            }) -%}
+        {%- endif -%}
+        {%- set rows = rows | merge([row]) -%}
     {%- endfor -%}
 
     {{ data_table([
         { key: 'date', label: (domain ~ 'column.date') | trans, cell: 'html', class: 'table--cell--nowrap' },
+        journal ? { key: 'actor', label: (domain ~ 'column.actor') | trans, cell: 'html' },
+        journal ? { key: 'subject', label: (domain ~ 'column.subject') | trans, cell: 'html' },
         { key: 'category', label: (domain ~ 'column.category') | trans, cell: 'html', class: 'table--cell--nowrap' },
         { key: 'type', label: (domain ~ 'column.type') | trans, cell: 'html' },
-        { key: 'context', label: (domain ~ 'column.context') | trans, cell: 'html', secondary: true },
-    ], rows) }}
+        { key: 'details', label: (domain ~ 'column.context') | trans, cell: 'html', secondary: true },
+    ] | filter(column => column), rows, {
+        filters: filters | default([]),
+        empty_label: (domain ~ 'empty') | trans,
+    }) }}
 
     {{ pagination(page, pages_count, { hide_single: true }) }}
 {%- endif -%}

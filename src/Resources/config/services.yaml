@@ -3,3 +3,7 @@ services:
         autowire: true
         autoconfigure: true
         public: false
+
+    Wexample\SymfonyActivityDs\Controller\:
+        resource: '../../Controller/'
+        tags: ['controller.service_arguments']

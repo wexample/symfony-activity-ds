@@ -1,6 +1,21 @@
+## The journal
+
+`/activity` (`activity_journal`) is everything symfony-activity logs, every subject together: the events and the field changes auditor records, newest first, fifty to a page. Its bar filters by category, by type and by period — the last day, week, month or year —, kept in the address. Who did it is a column whose names are links: pressing one narrows the journal to what that person did, shown above the table with the way back to everyone. A change knows its author by id only and links to nothing.
+
+It is shown to nobody until the application names the role reading it; without one, the page answers 404:
+
+```yaml
+# config/packages/wexample_symfony_activity_ds.yaml
+wexample_symfony_activity_ds:
+    journal:
+        page_role: ROLE_ADMIN
+```
+
+auditor's own viewer stays off: it reads the changes alone, entity by entity, in a layout of its own. The journal reads them with the events, in the application's.
+
 ## Partials
 
-Two ways of drawing a history read by symfony-activity's `ActivityRepository`, to include in a page of the application:
+Two ways of drawing a history read by symfony-activity, to include in a page of the application:
 
 ```twig
 {# The last entries, newest first, as a timeline, with the way to the rest. #}
@@ -15,6 +30,8 @@ Two ways of drawing a history read by symfony-activity's `ActivityRepository`, t
 } %}
 ```
 
-Each entry shows its category, its type code, its time and its context as recorded; one done by someone else than the subject says so. A failure, a refusal, a denial or an expiry is drawn in the danger tone. The page including them imports the styles of the `timeline`, `data-table`, `pagination` and `marker` components.
+Each entry shows its category, its type code and its time. An event shows its context as recorded, and says when someone else than the subject did it; a change lists the fields it touched, `old → new` — `partials/changes.html.twig`, plain lines needing no style. A failure, a refusal, a denial or an expiry is drawn in the danger tone.
 
-The account pages of symfony-user-ds use both: the recent block on `/accounts/{id}`, the table on `/accounts/{id}/activity`.
+The table takes `journal: true` for the journal's two more columns, who did it and what it was about, and `filters` for its bar, as `data_table()` takes them. The page including them imports the styles of the `timeline`, `data-table`, `filter-bar`, `pagination` and `marker` components.
+
+The account pages of symfony-user-ds use both: the recent block on `/accounts/{id}`, the table on `/accounts/{id}/activity` — the changes made to an audited account among the rest.

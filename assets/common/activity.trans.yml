@@ -2,8 +2,12 @@ en:
   empty: Nothing recorded yet.
   more: The whole history
   by_someone_else: by someone else
+  change:
+    emptied: emptied
   column:
     date: When
+    actor: Who
+    subject: About
     category: Category
     type: What
     context: Details
@@ -12,8 +16,12 @@ fr:
   empty: Rien d'enregistré pour le moment.
   more: Tout l'historique
   by_someone_else: par quelqu'un d'autre
+  change:
+    emptied: vidé
   column:
     date: Quand
+    actor: Qui
+    subject: Sur
     category: Catégorie
     type: Quoi
     context: Détails
