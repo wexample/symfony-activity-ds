@@ -17,7 +17,7 @@ auditor's own viewer stays off: it reads the changes alone, entity by entity, in
 
 Two ways of drawing a history read by symfony-activity, to include in a page of the application:
 
-```twig
+{% raw %}```twig
 {# The last entries, newest first, as a timeline, with the way to the rest. #}
 {% include '@WexampleSymfonyActivityDsBundle/partials/recent.html.twig' with {
     entries: activity_repository.findRecent(subject, 10),
@@ -28,7 +28,7 @@ Two ways of drawing a history read by symfony-activity, to include in a page of 
 {% include '@WexampleSymfonyActivityDsBundle/partials/table.html.twig' with {
     entries: found.entries, page: page, pages_count: found.pages_count,
 } %}
-```
+```{% endraw %}
 
 Each entry shows its category, its type code and its time, and how many times it happened when symfony-activity merged its repeats. An event shows its context as recorded, and says when someone else than the subject did it; a change lists the fields it touched, `old → new` — `partials/changes.html.twig`, plain lines needing no style. A failure, a refusal, a denial, an expiry, an error or a limit exceeded is drawn in the danger tone.
 
