@@ -30,8 +30,31 @@ Two ways of drawing a history read by symfony-activity, to include in a page of 
 } %}
 ```
 
-Each entry shows its category, its type code and its time. An event shows its context as recorded, and says when someone else than the subject did it; a change lists the fields it touched, `old → new` — `partials/changes.html.twig`, plain lines needing no style. A failure, a refusal, a denial or an expiry is drawn in the danger tone.
+Each entry shows its category, its type code and its time, and how many times it happened when symfony-activity merged its repeats. An event shows its context as recorded, and says when someone else than the subject did it; a change lists the fields it touched, `old → new` — `partials/changes.html.twig`, plain lines needing no style. A failure, a refusal, a denial, an expiry, an error or a limit exceeded is drawn in the danger tone.
 
 The table takes `journal: true` for the journal's two more columns, who did it and what it was about, and `filters` for its bar, as `data_table()` takes them. The page including them imports the styles of the `timeline`, `data-table`, `filter-bar`, `pagination` and `marker` components.
 
 The account pages of symfony-user-ds use both: the recent block on `/accounts/{id}`, the table on `/accounts/{id}/activity` — the changes made to an audited account among the rest.
+
+## What the browser reports
+
+`js/Services/ActivityReportService` sends symfony-activity what happens in the browser, to `POST /_activity/report`:
+
+- `client` — every error the loader's `ErrorService` captures, uncaught ones included, as `client.<severity>` with its message, where it was thrown, the page and the start of its stack. An error is sent once per page however often it repeats; its fingerprint, where it was thrown, lets the server count it across pages.
+- `ui` — what the forms of the loader go through, `ui.form.opened`, `ui.form.invalid` with the fields the server refused, `ui.form.abandoned` when changed then left unsent; and whatever a script tells through `track()`:
+
+```ts
+(this.app.services.activityReport as ActivityReportService).track('ui.tour.skipped', { step: 3 });
+```
+
+An application lists the service with its own:
+
+```ts
+import ActivityReportService from '@wexample/symfony-activity-ds/js/Services/ActivityReportService';
+
+getServices() {
+  return [...super.getServices(), ActivityReportService];
+}
+```
+
+and opens the categories on the server side — `client_categories`, and each enabled under `categories` (symfony-activity's usage page). Entries leave in batches, the last ones with the page as it goes. The server answers which categories it still records, and the others stop being sent.

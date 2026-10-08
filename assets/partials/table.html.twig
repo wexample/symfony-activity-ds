@@ -29,10 +29,13 @@
                 {%- endif -%}
             {%- endif -%}
         {%- endset -%}
+        {#- A merged entry says how many times it happened, and when last. -#}
         {%- set row = {
             date: date_display(entry.occurredAt, 'date_time_short'),
-            category: marker(entry.type matches '/(failed|denied|refused|expired)/' ? 'danger' : 'neutral', entry.category, { compact: true }),
-            type: '<code>' ~ entry.type | e ~ '</code>',
+            category: marker(entry.type matches '/(failed|denied|refused|expired|error|exceeded)/' ? 'danger' : 'neutral', entry.category, { compact: true }),
+            type: '<code>' ~ entry.type | e ~ '</code>' ~ (entry.occurrences > 1
+                ? ' <span class="text-secondary">' ~ (domain ~ 'occurrences') | trans({ '%count%': entry.occurrences, '%last%': entry.lastOccurredAt | date('Y-m-d H:i') }) | e ~ '</span>'
+                : ''),
             details: details_cell,
         } -%}
         {%- if journal -%}

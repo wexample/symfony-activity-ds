@@ -12,9 +12,9 @@
     {%- for entry in entries -%}
         {%- set body = entry.change ? include('@WexampleSymfonyActivityDsBundle/partials/changes.html.twig', { entry: entry }) : null -%}
         {%- set items = items | merge([{
-            title: entry.type,
+            title: entry.type ~ (entry.occurrences > 1 ? ' ×' ~ entry.occurrences : ''),
             meta: entry.category ~ ' · ' ~ entry.occurredAt | date('Y-m-d H:i') ~ (entry.actorId ? ' · ' ~ (entry.actorLabel ?: (domain ~ 'by_someone_else') | trans) : ''),
-            tone: entry.type matches '/(failed|denied|refused|expired)/' ? 'danger' : null,
+            tone: entry.type matches '/(failed|denied|refused|expired|error|exceeded)/' ? 'danger' : null,
             body: body,
         }]) -%}
     {%- endfor -%}
