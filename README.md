@@ -1,6 +1,6 @@
 # symfony-activity-ds
 
-Version: 2.0.0
+Version: 2.0.1
 
 ## The journal
 
@@ -88,10 +88,10 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 ## Dependencies
 
 - php: >=8.5
-- wexample/symfony-activity: >=2.0.0
-- wexample/symfony-design-system: >=32.0.0
-- wexample/symfony-helpers: >=15.0.0
-- wexample/symfony-loader: >=22.0.0
+- wexample/symfony-activity: >=3.0.0
+- wexample/symfony-design-system: >=34.0.0
+- wexample/symfony-helpers: >=16.0.0
+- wexample/symfony-loader: >=23.0.0
 
 ## Versioning & Compatibility Policy
 
