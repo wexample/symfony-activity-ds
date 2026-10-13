@@ -1,6 +1,6 @@
 # symfony-activity-ds
 
-Version: 2.0.1
+Version: 2.0.2
 
 ## The journal
 
@@ -89,7 +89,7 @@ Visit the [Wexample Suite documentation](https://docs.wexample.com) for the comp
 
 - php: >=8.5
 - wexample/symfony-activity: >=3.0.0
-- wexample/symfony-design-system: >=34.0.0
+- wexample/symfony-design-system: >=35.0.0
 - wexample/symfony-helpers: >=16.0.0
 - wexample/symfony-loader: >=23.0.0
 
