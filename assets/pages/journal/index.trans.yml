@@ -29,3 +29,35 @@ fr:
   actor:
     label: "Fait par %actor%"
     clear: Tout le monde
+
+zh:
+  page_title: 日志
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: 类别
+    type: 什么
+    period: 时间段
+  period:
+    day: 过去24小时
+    week: 过去7天
+    month: 上个月
+    year: 去年
+  actor:
+    label: '由 %actor% 完成'
+    clear: 所有人
+
+ar:
+  page_title: المجلة
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: الفئة
+    type: ما
+    period: الفترة
+  period:
+    day: 'آخر 24 ساعة'
+    week: 'آخر 7 أيام'
+    month: 'الشهر الماضي'
+    year: 'السنة الماضية'
+  actor:
+    label: 'تم بواسطة %actor%'
+    clear: الجميع

@@ -27,3 +27,33 @@ fr:
     category: Catégorie
     type: Quoi
     context: Détails
+
+zh:
+  empty: 尚未记录任何内容。
+  more: 完整历史
+  by_someone_else: 由其他人
+  occurrences: '×%count%，最后一次 %last%'
+  change:
+    emptied: 已清空
+  column:
+    date: 时间
+    actor: 谁
+    subject: 主题
+    category: 类别
+    type: 类型
+    context: 详情
+
+ar:
+  empty: 'لا يوجد تسجيلات حتى الآن.'
+  more: 'التاريخ الكامل'
+  by_someone_else: 'بواسطة شخص آخر'
+  occurrences: '×%count%، آخر %last%'
+  change:
+    emptied: 'تم إفراغه'
+  column:
+    date: متى
+    actor: من
+    subject: عن
+    category: الفئة
+    type: ماذا
+    context: التفاصيل

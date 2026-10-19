@@ -1,0 +1,186 @@
+{
+    "common/activity.ar.yml": {
+        "by_someone_else": {
+            "hash": "52b92c23a39dc1d91c7cb3012e780fbb",
+            "engine": "syrtis"
+        },
+        "change.emptied": {
+            "hash": "e2af76b671ae78d613eea280ce5ffc21",
+            "engine": "syrtis"
+        },
+        "column.actor": {
+            "hash": "ac27fd3feb35f2a341ec8e5d4061211c",
+            "engine": "syrtis"
+        },
+        "column.category": {
+            "hash": "b5c7a8199aefd8d3a2f1e287b031df54",
+            "engine": "syrtis"
+        },
+        "column.context": {
+            "hash": "82c255ef7eaf79a8e12940dc201c8ede",
+            "engine": "syrtis"
+        },
+        "column.date": {
+            "hash": "e5ba22fbd24f50047d647cc058bdbf20",
+            "engine": "syrtis"
+        },
+        "column.subject": {
+            "hash": "ba57c17ff4111b548d71b058d0754068",
+            "engine": "syrtis"
+        },
+        "column.type": {
+            "hash": "648060af124be7241413efa51cd00629",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "a0c2df69dd2231f74514f16abc413e5e",
+            "engine": "syrtis"
+        },
+        "more": {
+            "hash": "a3ee912baafc8abcaf0182ba4d493f70",
+            "engine": "syrtis"
+        },
+        "occurrences": {
+            "hash": "10e7ddab5e258f9249d3946248b6c3ff",
+            "engine": "syrtis"
+        }
+    },
+    "common/activity.zh.yml": {
+        "by_someone_else": {
+            "hash": "52b92c23a39dc1d91c7cb3012e780fbb",
+            "engine": "syrtis"
+        },
+        "change.emptied": {
+            "hash": "e2af76b671ae78d613eea280ce5ffc21",
+            "engine": "syrtis"
+        },
+        "column.actor": {
+            "hash": "ac27fd3feb35f2a341ec8e5d4061211c",
+            "engine": "syrtis"
+        },
+        "column.category": {
+            "hash": "b5c7a8199aefd8d3a2f1e287b031df54",
+            "engine": "syrtis"
+        },
+        "column.context": {
+            "hash": "82c255ef7eaf79a8e12940dc201c8ede",
+            "engine": "syrtis"
+        },
+        "column.date": {
+            "hash": "e5ba22fbd24f50047d647cc058bdbf20",
+            "engine": "syrtis"
+        },
+        "column.subject": {
+            "hash": "ba57c17ff4111b548d71b058d0754068",
+            "engine": "syrtis"
+        },
+        "column.type": {
+            "hash": "648060af124be7241413efa51cd00629",
+            "engine": "syrtis"
+        },
+        "empty": {
+            "hash": "a0c2df69dd2231f74514f16abc413e5e",
+            "engine": "syrtis"
+        },
+        "more": {
+            "hash": "a3ee912baafc8abcaf0182ba4d493f70",
+            "engine": "syrtis"
+        },
+        "occurrences": {
+            "hash": "10e7ddab5e258f9249d3946248b6c3ff",
+            "engine": "syrtis"
+        }
+    },
+    "pages/journal/index.ar.yml": {
+        "actor.clear": {
+            "hash": "8065855db5eb4485e2d13dcc53bef522",
+            "engine": "syrtis"
+        },
+        "actor.label": {
+            "hash": "6038dcdbfec1dfc281569fd879cd2439",
+            "engine": "syrtis"
+        },
+        "filter.category": {
+            "hash": "b5c7a8199aefd8d3a2f1e287b031df54",
+            "engine": "syrtis"
+        },
+        "filter.period": {
+            "hash": "fc97c9175c073c5ba57ec0717a298b8b",
+            "engine": "syrtis"
+        },
+        "filter.type": {
+            "hash": "648060af124be7241413efa51cd00629",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "0f96a4ef0f41ad07c0c5a2f9697b6168",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "7562b38a55d606a114371a28a701f194",
+            "engine": "syrtis"
+        },
+        "period.day": {
+            "hash": "dc345f141af323ebe04bb356bb9f8697",
+            "engine": "syrtis"
+        },
+        "period.month": {
+            "hash": "551ff3281634ac40a5d7b244c2305682",
+            "engine": "syrtis"
+        },
+        "period.week": {
+            "hash": "28605f3f910e4083f6230935fc8fd6cc",
+            "engine": "syrtis"
+        },
+        "period.year": {
+            "hash": "7bee25115706d96c9bfbbfb90b164a08",
+            "engine": "syrtis"
+        }
+    },
+    "pages/journal/index.zh.yml": {
+        "actor.clear": {
+            "hash": "8065855db5eb4485e2d13dcc53bef522",
+            "engine": "syrtis"
+        },
+        "actor.label": {
+            "hash": "6038dcdbfec1dfc281569fd879cd2439",
+            "engine": "syrtis"
+        },
+        "filter.category": {
+            "hash": "b5c7a8199aefd8d3a2f1e287b031df54",
+            "engine": "syrtis"
+        },
+        "filter.period": {
+            "hash": "fc97c9175c073c5ba57ec0717a298b8b",
+            "engine": "syrtis"
+        },
+        "filter.type": {
+            "hash": "648060af124be7241413efa51cd00629",
+            "engine": "syrtis"
+        },
+        "page_icon": {
+            "hash": "0f96a4ef0f41ad07c0c5a2f9697b6168",
+            "engine": "syrtis"
+        },
+        "page_title": {
+            "hash": "7562b38a55d606a114371a28a701f194",
+            "engine": "syrtis"
+        },
+        "period.day": {
+            "hash": "dc345f141af323ebe04bb356bb9f8697",
+            "engine": "syrtis"
+        },
+        "period.month": {
+            "hash": "551ff3281634ac40a5d7b244c2305682",
+            "engine": "syrtis"
+        },
+        "period.week": {
+            "hash": "28605f3f910e4083f6230935fc8fd6cc",
+            "engine": "syrtis"
+        },
+        "period.year": {
+            "hash": "7bee25115706d96c9bfbbfb90b164a08",
+            "engine": "syrtis"
+        }
+    }
+}
