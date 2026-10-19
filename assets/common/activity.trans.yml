@@ -57,3 +57,288 @@ ar:
     category: الفئة
     type: ماذا
     context: التفاصيل
+
+hi:
+  empty: 'अभी तक कुछ भी रिकॉर्ड नहीं किया गया।'
+  more: 'पूर्ण इतिहास'
+  by_someone_else: 'किसी और द्वारा'
+  occurrences: '×%count%, अंतिम %last%'
+  change:
+    emptied: 'खाली कर दिया गया'
+  column:
+    date: कब
+    actor: कौन
+    subject: क्या
+    category: श्रेणी
+    type: क्या
+    context: विवरण
+
+he:
+  empty: 'עדיין לא נרשם דבר.'
+  more: 'ההיסטוריה המלאה'
+  by_someone_else: 'על ידי מישהו אחר'
+  occurrences: '×%count%, האחרון %last%'
+  change:
+    emptied: נוקב
+  column:
+    date: מתי
+    actor: מי
+    subject: 'על מה'
+    category: קטגוריה
+    type: מה
+    context: פרטים
+
+fa:
+  empty: 'هنوز چیزی ثبت نشده است.'
+  more: 'تمام تاریخچه'
+  by_someone_else: 'توسط شخص دیگری'
+  occurrences: '×%count%، آخرین %last%'
+  change:
+    emptied: 'خالی شد'
+  column:
+    date: زمان
+    actor: 'چه کسی'
+    subject: درباره
+    category: دسته‌بندی
+    type: 'چه چیز'
+    context: جزئیات
+
+ur:
+  empty: 'ابھی تک کچھ بھی نہیں ریکارڈ کیا گیا۔'
+  more: 'پورا تاریخ'
+  by_someone_else: 'کسی اور کے ذریعہ'
+  occurrences: '×%count%، آخری %last%'
+  change:
+    emptied: 'خالی کر دیا گیا'
+  column:
+    date: کب
+    actor: کون
+    subject: کیا
+    category: زمرہ
+    type: کیا
+    context: تفصیلات
+
+ja:
+  empty: まだ何も記録されていません。
+  more: すべての履歴
+  by_someone_else: 他の誰かによる
+  occurrences: '×%count%, 最後の %last%'
+  change:
+    emptied: 空にされました
+  column:
+    date: いつ
+    actor: 誰
+    subject: 何について
+    category: カテゴリ
+    type: 何
+    context: 詳細
+
+ko:
+  empty: '아직 기록된 내용이 없습니다.'
+  more: '전체 기록'
+  by_someone_else: '다른 사람에 의해'
+  occurrences: '×%count%, 마지막 %last%'
+  change:
+    emptied: 비워짐
+  column:
+    date: 언제
+    actor: 누구
+    subject: '무엇에 대한'
+    category: 카테고리
+    type: 무엇
+    context: 상세정보
+
+bn:
+  empty: 'এখনো কিছু রেকর্ড হয়নি।'
+  more: 'সম্পূর্ণ ইতিহাস'
+  by_someone_else: 'কাউকে দ্বারা'
+  occurrences: '×%count%, শেষ %last%'
+  change:
+    emptied: খালি
+  column:
+    date: কখন
+    actor: কে
+    subject: 'কিসের সম্পর্কে'
+    category: শ্রেণী
+    type: কি
+    context: বিস্তারিত
+
+th:
+  empty: ยังไม่มีการบันทึกไว้
+  more: ประวัติทั้งหมด
+  by_someone_else: โดยคนอื่น
+  occurrences: '×%count%, ล่าสุด %last%'
+  change:
+    emptied: ถูกลบ
+  column:
+    date: เมื่อไร
+    actor: ใคร
+    subject: เกี่ยวกับ
+    category: หมวดหมู่
+    type: อะไร
+    context: รายละเอียด
+
+de:
+  empty: 'Noch nichts aufgezeichnet.'
+  more: 'Die gesamte Historie'
+  by_someone_else: 'von jemand anderem'
+  occurrences: '×%count%, zuletzt %last%'
+  change:
+    emptied: geleert
+  column:
+    date: Wann
+    actor: Wer
+    subject: Worüber
+    category: Kategorie
+    type: Was
+    context: Details
+
+fi:
+  empty: 'Ei vielä mitään tallennettu.'
+  more: 'Koko historia'
+  by_someone_else: 'jonkun muun'
+  occurrences: '×%count%, viimeksi %last%'
+  change:
+    emptied: tyhjennetty
+  column:
+    date: Milloin
+    actor: Kuka
+    subject: Aihe
+    category: Kategoria
+    type: Mikä
+    context: Yksityiskohdat
+
+ru:
+  empty: 'Еще ничего не записано.'
+  more: 'Вся история'
+  by_someone_else: 'кем-то другим'
+  occurrences: '×%count%, последний %last%'
+  change:
+    emptied: очищено
+  column:
+    date: Когда
+    actor: Кто
+    subject: 'О чем'
+    category: Категория
+    type: Что
+    context: Детали
+
+pl:
+  empty: 'Nic jeszcze nie zarejestrowano.'
+  more: 'Cała historia'
+  by_someone_else: 'przez kogoś innego'
+  occurrences: '×%count%, ostatni %last%'
+  change:
+    emptied: wyczyszczono
+  column:
+    date: Kiedy
+    actor: Kto
+    subject: 'O czym'
+    category: Kategoria
+    type: Co
+    context: Szczegóły
+
+es:
+  empty: 'Nada registrado aún.'
+  more: 'Toda la historia'
+  by_someone_else: 'por otra persona'
+  occurrences: '×%count%, último %last%'
+  change:
+    emptied: vacío
+  column:
+    date: Cuándo
+    actor: Quién
+    subject: Sobre
+    category: Categoría
+    type: Qué
+    context: Detalles
+
+it:
+  empty: 'Nessuna registrazione ancora.'
+  more: "L'intera cronologia"
+  by_someone_else: 'da qualcun altro'
+  occurrences: '×%count%, ultimo %last%'
+  change:
+    emptied: svuotato
+  column:
+    date: Quando
+    actor: Chi
+    subject: 'Di cosa'
+    category: Categoria
+    type: Cosa
+    context: Dettagli
+
+pt_BR:
+  empty: 'Nada registrado ainda.'
+  more: 'Todo o histórico'
+  by_someone_else: 'por outra pessoa'
+  occurrences: '×%count%, última %last%'
+  change:
+    emptied: esvaziado
+  column:
+    date: Quando
+    actor: Quem
+    subject: Sobre
+    category: Categoria
+    type: 'O que'
+    context: Detalhes
+
+tr:
+  empty: 'Henüz hiçbir kayıt yok.'
+  more: 'Tüm tarihçe'
+  by_someone_else: 'başka biri tarafından'
+  occurrences: '×%count%, son %last%'
+  change:
+    emptied: boşaltıldı
+  column:
+    date: Tarih
+    actor: Kim
+    subject: Hakkında
+    category: Kategori
+    type: Nedir
+    context: Detaylar
+
+vi:
+  empty: 'Chưa có gì được ghi lại.'
+  more: 'Toàn bộ lịch sử'
+  by_someone_else: 'bởi người khác'
+  occurrences: '×%count%, lần cuối %last%'
+  change:
+    emptied: 'đã được xóa'
+  column:
+    date: 'Khi nào'
+    actor: Ai
+    subject: 'Về cái gì'
+    category: 'Danh mục'
+    type: 'Cái gì'
+    context: 'Chi tiết'
+
+id:
+  empty: 'Belum ada yang tercatat.'
+  more: 'Seluruh riwayat'
+  by_someone_else: 'oleh orang lain'
+  occurrences: '×%count%, terakhir %last%'
+  change:
+    emptied: dikosongkan
+  column:
+    date: Kapan
+    actor: Siapa
+    subject: Tentang
+    category: Kategori
+    type: Apa
+    context: Rincian
+
+nl:
+  empty: 'Nog niets vastgelegd.'
+  more: 'De hele geschiedenis'
+  by_someone_else: 'door iemand anders'
+  occurrences: '×%count%, laatste %last%'
+  change:
+    emptied: leeggemaakt
+  column:
+    date: Wanneer
+    actor: Wie
+    subject: Over
+    category: Categorie
+    type: Wat
+    context: Details

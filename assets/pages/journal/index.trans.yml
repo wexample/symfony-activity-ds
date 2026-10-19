@@ -61,3 +61,307 @@ ar:
   actor:
     label: 'تم بواسطة %actor%'
     clear: الجميع
+
+hi:
+  page_title: जर्नल
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: श्रेणी
+    type: क्या
+    period: अवधि
+  period:
+    day: 'पिछले 24 घंटे'
+    week: 'पिछले 7 दिन'
+    month: 'पिछले महीने'
+    year: 'पिछले वर्ष'
+  actor:
+    label: 'द्वारा किया गया %actor%'
+    clear: सभी
+
+he:
+  page_title: יומן
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: קטגוריה
+    type: מה
+    period: תקופה
+  period:
+    day: '24 השעות האחרונות'
+    week: '7 הימים האחרונים'
+    month: 'החודש האחרון'
+    year: 'השנה האחרונה'
+  actor:
+    label: 'בוצע על ידי %actor%'
+    clear: כולם
+
+fa:
+  page_title: روزنامه
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: دسته‌بندی
+    type: چه
+    period: زمان
+  period:
+    day: 'آخرین ۲۴ ساعت'
+    week: 'آخرین ۷ روز'
+    month: 'ماه گذشته'
+    year: 'سال گذشته'
+  actor:
+    label: 'انجام شده توسط %actor%'
+    clear: همه
+
+ur:
+  page_title: جرنل
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: زمرہ
+    type: کیا
+    period: مدت
+  period:
+    day: 'آخری 24 گھنٹے'
+    week: 'آخری 7 دن'
+    month: 'پچھلا مہینہ'
+    year: 'پچھلا سال'
+  actor:
+    label: 'کیا %actor% نے کیا'
+    clear: سب
+
+ja:
+  page_title: ジャーナル
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: カテゴリ
+    type: 何
+    period: 期間
+  period:
+    day: 過去24時間
+    week: 過去7日間
+    month: 先月
+    year: 昨年
+  actor:
+    label: '%actor%によって完了'
+    clear: 全員
+
+ko:
+  page_title: 저널
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: 카테고리
+    type: 무엇
+    period: 기간
+  period:
+    day: '지난 24시간'
+    week: '지난 7일'
+    month: '지난 달'
+    year: '지난 해'
+  actor:
+    label: '%actor%에 의해 완료됨'
+    clear: 모두
+
+bn:
+  page_title: জার্নাল
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: বিভাগ
+    type: কি
+    period: সময়কাল
+  period:
+    day: 'গত ২৪ ঘণ্টা'
+    week: 'গত ৭ দিন'
+    month: 'গত মাস'
+    year: 'গত বছর'
+  actor:
+    label: 'করেছেন %actor%'
+    clear: সবাই
+
+th:
+  page_title: บันทึกประจำวัน
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: หมวดหมู่
+    type: ประเภท
+    period: ช่วงเวลา
+  period:
+    day: '24 ชั่วโมงที่ผ่านมา'
+    week: '7 วันที่ผ่านมา'
+    month: เดือนที่แล้ว
+    year: ปีที่แล้ว
+  actor:
+    label: 'ทำโดย %actor%'
+    clear: ทุกคน
+
+de:
+  page_title: Journal
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Kategorie
+    type: Was
+    period: Zeitraum
+  period:
+    day: 'Letzte 24 Stunden'
+    week: 'Letzte 7 Tage'
+    month: 'Letzter Monat'
+    year: 'Letztes Jahr'
+  actor:
+    label: 'Erledigt von %actor%'
+    clear: Alle
+
+fi:
+  page_title: Päiväkirja
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Kategoria
+    type: Mikä
+    period: Aika
+  period:
+    day: 'Viimeiset 24 tuntia'
+    week: 'Viimeiset 7 päivää'
+    month: 'Viime kuussa'
+    year: 'Viime vuonna'
+  actor:
+    label: 'Tehty %actor%'
+    clear: Kaikki
+
+ru:
+  page_title: Журнал
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Категория
+    type: Что
+    period: Период
+  period:
+    day: 'Последние 24 часа'
+    week: 'Последние 7 дней'
+    month: 'Последний месяц'
+    year: 'Последний год'
+  actor:
+    label: 'Сделано %actor%'
+    clear: Все
+
+pl:
+  page_title: Dziennik
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Kategoria
+    type: Co
+    period: Okres
+  period:
+    day: 'Ostatnie 24 godziny'
+    week: 'Ostatnie 7 dni'
+    month: 'Ostatni miesiąc'
+    year: 'Ostatni rok'
+  actor:
+    label: 'Wykonane przez %actor%'
+    clear: Wszyscy
+
+es:
+  page_title: Diario
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Categoría
+    type: Qué
+    period: Período
+  period:
+    day: 'Últimas 24 horas'
+    week: 'Últimos 7 días'
+    month: 'Último mes'
+    year: 'Último año'
+  actor:
+    label: 'Hecho por %actor%'
+    clear: Todos
+
+it:
+  page_title: Giornale
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Categoria
+    type: Cosa
+    period: Periodo
+  period:
+    day: 'Ultime 24 ore'
+    week: 'Ultimi 7 giorni'
+    month: 'Ultimo mese'
+    year: 'Ultimo anno'
+  actor:
+    label: 'Fatto da %actor%'
+    clear: Tutti
+
+pt_BR:
+  page_title: Diário
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Categoria
+    type: 'O que'
+    period: Período
+  period:
+    day: 'Últimas 24 horas'
+    week: 'Últimos 7 dias'
+    month: 'Último mês'
+    year: 'Último ano'
+  actor:
+    label: 'Feito por %actor%'
+    clear: Todos
+
+tr:
+  page_title: Günlük
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Kategori
+    type: Ne
+    period: Dönem
+  period:
+    day: 'Son 24 saat'
+    week: 'Son 7 gün'
+    month: 'Geçen ay'
+    year: 'Geçen yıl'
+  actor:
+    label: '%actor% tarafından yapıldı'
+    clear: Herkes
+
+vi:
+  page_title: 'Nhật ký'
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: 'Danh mục'
+    type: 'Cái gì'
+    period: 'Thời gian'
+  period:
+    day: '24 giờ qua'
+    week: '7 ngày qua'
+    month: 'Tháng trước'
+    year: 'Năm trước'
+  actor:
+    label: 'Đã thực hiện bởi %actor%'
+    clear: 'Mọi người'
+
+id:
+  page_title: Jurnal
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Kategori
+    type: Apa
+    period: Periode
+  period:
+    day: '24 jam terakhir'
+    week: '7 hari terakhir'
+    month: 'Bulan lalu'
+    year: 'Tahun lalu'
+  actor:
+    label: 'Dilakukan oleh %actor%'
+    clear: Semua
+
+nl:
+  page_title: Journal
+  page_icon: 'ph:bold/clock-counter-clockwise'
+  filter:
+    category: Categorie
+    type: Wat
+    period: Periode
+  period:
+    day: 'Laatste 24 uur'
+    week: 'Laatste 7 dagen'
+    month: 'Laatste maand'
+    year: 'Laatste jaar'
+  actor:
+    label: 'Gedaan door %actor%'
+    clear: Iedereen
