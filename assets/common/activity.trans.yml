@@ -23,7 +23,7 @@ fr:
   column:
     date: Quand
     actor: Qui
-    subject: Sur
+    subject: 'Objet'
     category: Catégorie
     type: Quoi
     context: Détails
