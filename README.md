@@ -1,6 +1,6 @@
 # symfony-activity-ds
 
-Version: 2.0.6
+Version: 2.0.7
 
 ## The journal
 
@@ -87,9 +87,9 @@ The suite includes packages for configuration management, file handling, prompts
 
 - php: >=8.5
 - wexample/symfony-activity: >=3.0.0
-- wexample/symfony-design-system: >=38.0.0
-- wexample/symfony-helpers: >=17.0.0
-- wexample/symfony-loader: >=23.3.0
+- wexample/symfony-design-system: >=39.0.0
+- wexample/symfony-helpers: >=18.0.0
+- wexample/symfony-loader: >=24.0.0
 
 ## Versioning & Compatibility Policy
 
