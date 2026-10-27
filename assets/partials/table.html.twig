@@ -8,7 +8,8 @@
     `journal: true` draws the journal of every subject: who did it and what
     it was about get a column each, and who did it links to what else they
     did (`actor_route`, the page's own route by default). `filters` are handed
-    to the table's bar, as data_table() takes them. -#}
+    to the table's bar, as data_table() takes them. `scroll: true` lets the
+    table scroll sideways on its own when its details outgrow the room. -#}
 {%- set domain = 'WexampleSymfonyActivityDsBundle.common.activity::' -%}
 {%- set journal = journal | default(false) -%}
 {%- if entries is empty and not filters | default([]) -%}
@@ -64,6 +65,7 @@
     ] | filter(column => column), rows, {
         filters: filters | default([]),
         empty_label: (domain ~ 'empty') | trans,
+        scroll: scroll | default(false),
     }) }}
 
     {{ pagination(page, pages_count, { hide_single: true }) }}
