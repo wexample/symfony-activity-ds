@@ -1,7 +1,8 @@
 {#- The last entries of a history, newest first, as a timeline: the short
-    story a page about the subject shows, with the way to the whole of it
-    (`more_href`). Fed with the entries themselves (`entries`), events and
-    field changes alike, as ActivityRepository::findRecent() returns them. A
+    story a page about the subject shows. The way to the whole of it is the
+    including block's, in its footer — a body cannot draw it. Fed with the
+    entries themselves (`entries`), events and field changes alike, as
+    ActivityRepository::findRecent() returns them. A
     failure, a refusal, a denial is drawn in the danger tone; a change says
     which fields it touched. -#}
 {%- set domain = 'WexampleSymfonyActivityDsBundle.common.activity::' -%}
@@ -19,7 +20,4 @@
         }]) -%}
     {%- endfor -%}
     {{ component(render_pass, '@WexampleSymfonyDesignSystemBundle/components/timeline', {}, { items: items }) }}
-{%- endif -%}
-{%- if more_href | default(null) and entries is not empty -%}
-    <p>{{ text_link(more_href, (domain ~ 'more') | trans) }}</p>
 {%- endif -%}
