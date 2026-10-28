@@ -1,6 +1,6 @@
 {
   "name": "wexample/symfony-activity-ds",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "type": "library",
   "license": "MIT",
   "autoload": {
@@ -18,7 +18,7 @@
   "require": {
     "php": ">=8.5",
     "wexample/symfony-activity": ">=3.0.5",
-    "wexample/symfony-design-system": ">=39.0.3",
+    "wexample/symfony-design-system": ">=40.0.0",
     "wexample/symfony-helpers": ">=18.0.2",
     "wexample/symfony-loader": ">=25.3.0"
   },
