@@ -1,6 +1,6 @@
 # symfony-activity-ds
 
-Version: 2.0.12
+Version: 2.0.13
 
 Design-system screens for symfony-activity: the history of a subject, as a recent timeline and a paged table
 
